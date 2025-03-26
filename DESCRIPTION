@@ -1,0 +1,40 @@
+Package: GAModelSelection
+Type: Package
+Title: GA-Based Model Selection for Mixed Models
+Version: 0.1.0
+Authors@R: c(person("David Pablo", "Quevedo Colmena", email = "davquecol@outlook.es", role = c("aut", "cre"), comment = "Researcher in CSIC (Spanish Research Council)"))
+Description: Implements a genetic algorithm-based approach for automatic model selection in mixed 
+ models. The package provides functions for automated data preprocessing (handling missing values, 
+ normalizing the dependent variable, and outlier detection and management), candidate generation 
+ (employing a comprehensive genetic map with genes for model approach (lmer, glmer, glmer.nb, glmmTMB), 
+ family specification (binomial, gaussian, Gamma, poisson, nbinom2, nbinom1, compois, tweedie, 
+ beta_family, betabinomial, inverse.gaussian, truncated_compois, truncated_poisson, ziGamma, 
+ t_family, ordbeta), outlier removal (logical flag and removal percentage ranges), zero-inflation 
+ handling (different formula configurations), normalization approach (no_transform, arcsinh_x, boxcox, 
+ log_x, double_reverse_log, sqrt_x, yeojohnson, Lambert), shift addition and shift ranges, and link 
+ function (log, logit, probit, inverse, cloglog, identity, sqrt)). It also includes additional control 
+ genes for regularization (none, L1, L2, elastic_net), feature selection (all_predictors, stepwise, 
+ penalized), GA stopping criterion (fixed_iterations, convergence, max_runtime), population 
+ initialization (random, preselected), and cross-validation folds (5_fold, 10_fold, LOOCV). The package 
+ builds models with fixed and random effects by integrating candidate configurations from the genetic 
+ map, and evaluates model fitness using DHARMa diagnostic tests (KS, dispersion, outlier, heteroscedasticity) 
+ to compute a fitness metric (product of p-values multiplied by the log-likelihood) along with additional 
+ criteria such as AICc and cross-validation. Documentation Sections: Overview: Provides a comprehensive 
+ introduction to the package, its theoretical foundations, and its intended applications in ecological and 
+ scientific research. Installation: Contains detailed instructions on system prerequisites, installing 
+ dependencies, and installing the package from GitHub or locally. Usage: Offers practical examples and a 
+ demo function that illustrate the full workflow from data preprocessing through candidate generation, 
+ model building, and fitness evaluation. Reference: Includes full, auto-generated documentation for each 
+ function with detailed parameter descriptions, input formats, return values, and examples. Vignettes: 
+ Provides extended tutorials and case studies to demonstrate real-world applications and advanced workflows. 
+ News: Documents change logs, updates, and release notes.
+License: CSIC
+Encoding: UTF-8
+LazyData: true
+Imports: lme4, glmmTMB, DHARMa, bestNormalize, MuMIn, boot, caret, car
+Suggests: pkgdown, rmarkdown, knitr
+VignetteBuilder: knitr
+URL: https://github.com/yourusername/GAModelSelection
+BugReports: https://github.com/yourusername/GAModelSelection/issues
+RoxygenNote: 7.3.2
+

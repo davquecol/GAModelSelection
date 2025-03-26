@@ -1,0 +1,41 @@
+# _pkgdown.yml
+template:
+  bootstrap: 5
+  logo: "man/figures/logo.png"         # Optional: ensure this file exists or remove the line.
+  favicon: "man/figures/favicon.ico"    # Optional: ensure this file exists or remove the line.
+
+destination: docs
+
+url: "https://your-website-or-github-pages-url.com/GAModelSelection"
+
+navbar:
+  title: "GAModelSelection"
+  type: default
+  left:
+    - text: "Overview"
+      href: index.html
+    - text: "Reference"
+      href: reference/index.html
+    - text: "Articles"
+      href: articles/index.html
+    - text: "News"
+      href: news/index.html
+  right:
+    - icon: fab fa-github
+      href: "https://github.com/yourusername/GAModelSelection"
+
+reference:
+  - title: "All Functions"
+    contents:
+      - ".*"
+
+articles:
+  - title: "Vignettes"
+    contents:
+      - "vignettes"
+
+footer:
+  left:
+    text: "© 2023 David Pablo Quevedo Colmena, CSIC"
+  right:
+    text: "GAModelSelection"
